@@ -1,10 +1,5 @@
 import { SlidersHorizontal, X } from "lucide-react";
-import {
-  Description,
-  Dialog,
-  DialogPanel,
-  DialogTitle,
-} from "@headlessui/react";
+import { Dialog, DialogPanel } from "@headlessui/react";
 import { useState } from "react";
 import { navItems } from "../../constants";
 
@@ -30,7 +25,10 @@ const NavbarMobile = () => {
         className="relative z-50 lg:hidden"
       >
         <div className="fixed inset-0 w-screen flex items-center justify-center p-4 bg-black/85">
-          <DialogPanel transition className="w-[94%] space-y-4 p-6 border border-gray-100/20 rounded-md absolute top-0 m-4 bg-black text-white duration-200 ease-out data-closed:transform-[scale(97%)] data-closed:opacity-0">
+          <DialogPanel
+            transition
+            className="w-[94%] space-y-4 p-6 border border-gray-100/20 rounded-md absolute top-0 m-4 bg-black text-white duration-200 ease-out data-closed:transform-[scale(97%)] data-closed:opacity-0"
+          >
             <div className="flex items-center justify-between gap-x-4">
               <h3 className="text-xl font-normal">Menus</h3>
               <button
