@@ -12,11 +12,15 @@
 /* base style */
 @layer base {
   body {
-    @apply w-full relative overflow-x-hidden font-display;
+    @apply w-full relative overflow-x-hidden bg-neutral-100 font-display;
   }
 
   ::selection {
     background: #008545;
     color: white;
+  }
+
+  button {
+    @apply cursor-pointer;
   }
 }

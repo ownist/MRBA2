@@ -1,7 +1,9 @@
+import NavbarDesktop from "./components/Navbar/NavbarDesktop";
+
 const App = () => {
   return (
     <>
-      <h1>Customer Support</h1>
+      <NavbarDesktop />
     </>
   );
 };
