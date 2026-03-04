@@ -1,5 +1,6 @@
 import { Logs } from "lucide-react";
 import TicketCards from "./TicketCards";
+import { Suspense } from "react";
 
 const ticketsFetch = async () => {
   const res = await fetch("./data.json");
@@ -18,13 +19,15 @@ const TicketsContainer = () => {
               Customer Tickets
             </h1>
 
-            <button className="lg:hidden py-2 px-2.5 rounded bg-gray-200 border border-gray-200">
+            <button className="lg:hidden py-2 px-2.5 rounded bg-white border border-gray-300">
               <Logs size={16} className="text-zinc-700" />
             </button>
           </div>
 
           {/* tickets cards */}
-          <TicketCards ticketsPromise={ticketsPromise} />
+          <Suspense fallback={<h1>Loading...</h1>}>
+            <TicketCards ticketsPromise={ticketsPromise} />
+          </Suspense>
         </div>
       </div>
     </>

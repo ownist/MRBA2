@@ -1,7 +1,7 @@
 [
   {
     "id": 1001,
-    "title": "Login Issues - Can't Access Account",
+    "title": "Login Issues",
     "description": "Customer is unable to log in to their account. They've tried resetting their password multiple times but still...",
     "customer": "John Smith",
     "priority": "HIGH PRIORITY",
@@ -23,7 +23,7 @@
     "description": "The sidebar overlaps the main content on screen sizes below 1024px.",
     "customer": "Robert Dow",
     "priority": "MEDIUM PRIORITY",
-    "status": "In Progress",
+    "status": "Open",
     "createdAt": "1/17/2024"
   },
   {
@@ -50,7 +50,7 @@
     "description": "Images larger than 2MB are being rejected without a proper error message.",
     "customer": "Michael Scott",
     "priority": "MEDIUM PRIORITY",
-    "status": "Closed",
+    "status": "Open",
     "createdAt": "1/20/2024"
   },
   {
@@ -59,7 +59,7 @@
     "description": "Search queries are taking more than 5 seconds to return results from the DB.",
     "customer": "Pam Beesly",
     "priority": "HIGH PRIORITY",
-    "status": "In Progress",
+    "status": "Open",
     "createdAt": "1/21/2024"
   },
   {
@@ -86,7 +86,7 @@
     "description": "The monthly export feature is crashing when generating data for large accounts.",
     "customer": "Angela Martin",
     "priority": "MEDIUM PRIORITY",
-    "status": "In Progress",
+    "status": "Open",
     "createdAt": "1/24/2024"
   },
   {
@@ -113,7 +113,7 @@
     "description": "Several buttons in the settings page are showing raw JSON keys instead of labels.",
     "customer": "Stanley Hudson",
     "priority": "LOW PRIORITY",
-    "status": "Closed",
+    "status": "Open",
     "createdAt": "1/27/2024"
   },
   {
@@ -131,7 +131,7 @@
     "description": "Dashboard showing 'Out of Stock' for items that have positive balance in DB.",
     "customer": "Ryan Howard",
     "priority": "HIGH PRIORITY",
-    "status": "In Progress",
+    "status": "Open",
     "createdAt": "1/29/2024"
   },
   {
