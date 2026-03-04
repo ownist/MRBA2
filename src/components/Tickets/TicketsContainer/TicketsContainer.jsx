@@ -1,6 +1,7 @@
 import { Logs } from "lucide-react";
 import TicketCards from "./TicketCards";
 import { Suspense } from "react";
+import Loading from "../../Loading";
 
 const ticketsFetch = async () => {
   const res = await fetch("./data.json");
@@ -25,7 +26,7 @@ const TicketsContainer = () => {
           </div>
 
           {/* tickets cards */}
-          <Suspense fallback={<h1>Loading...</h1>}>
+          <Suspense fallback={<Loading />}>
             <TicketCards ticketsPromise={ticketsPromise} />
           </Suspense>
         </div>
