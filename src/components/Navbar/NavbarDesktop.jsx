@@ -1,6 +1,6 @@
-import React from "react";
 import { navItems } from "../../constants";
-import { Plus, SlidersHorizontal } from "lucide-react";
+import { Plus } from "lucide-react";
+import NavbarMobile from "./NavbarMobile";
 
 const NavbarDesktop = () => {
   return (
@@ -36,10 +36,7 @@ const NavbarDesktop = () => {
               <span className="hidden sm:inline-flex">New Ticket</span>
             </button>
 
-            {/* mobile menu */}
-            <button className="lg:hidden py-2 sm:py-3.5 px-2.5 sm:px-4 bg-gray-200 border border-gray-400/20 rounded-sm">
-              <SlidersHorizontal size={16} className="text-zinc-600" />
-            </button>
+            <NavbarMobile />
           </div>
         </div>
       </nav>
