@@ -1,16 +1,45 @@
-# React + Vite
+**1) What is JSX, and why is it used?**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- JSX মানে JavaScript XML
+- এটা JavaScript এর ভেতরে HTML এর মতো কোড লেখার জন্য ব্যবহৃত হয়
 
-Currently, two official plugins are available:
+###
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**2️) What is the difference between State and Props?**
 
-## React Compiler
+- Props: Read-only, Change করা যায় না
+- State: Change করা যায়
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+###
 
-## Expanding the ESLint configuration
+**3️) What is the useState hook, and how does it work?**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `useState` হলো একটা React Hook যেটা functional component এ state ব্যবহার করার সুযোগ দেয়
+- How it work's: example
+
+```jsx
+import { useState } from "react";
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return <button onClick={() => setCount(count + 1)}>{count}</button>;
+}
+```
+
+- `count` হলো current state
+- `setCount` হলো state update করার function, এবং
+- `0` হলো initial value
+
+###
+
+**4️) How can you share state between components in React?**
+
+- Using Props Drilling / Lift State Up: Common parent component এ state রেখে তারপর props দিয়ে child component এ পাঠানোর মাধ্যমে
+
+###
+
+**5) How is event handling done in React?**
+
+- React এ event handle করা হয় JSX এর মাধ্যমে
+- জাভাস্ক্রিপ্ট এ আমরা `addEventListener` এর মাধ্যমে event handle করতাম কিন্তু React এ `onclick` এর মাধ্যমে event handle করা হয়
