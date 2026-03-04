@@ -1,7 +1,5 @@
 import favicon from "./favicon.ico";
-import vectorBgFirst from "./vector_bg_01.png";
-import vectorBgSecond from "./vector_bg_02.png";
-import vbgwFirst from "./vbgw_01.png";
-import vbgwSecond from "./vbgw_02.png";
+import vectorLeft from "./vector_left.png";
+import vector_right from "./vector_right.png";
 
-export { favicon, vectorBgFirst, vectorBgSecond, vbgwFirst, vbgwSecond };
+export { favicon, vectorLeft, vector_right };
