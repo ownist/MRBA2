@@ -1,6 +1,6 @@
 import { vector_right, vectorLeft } from "../assets";
 
-const TasksProgress = () => {
+const TasksProgress = ({ insProgressTasks, resolvedTasks }) => {
   return (
     <>
       <div className="my-8 sm:my-20 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -17,7 +17,9 @@ const TasksProgress = () => {
           />
           <div className="px-4 py-15 text-center space-y-4">
             <h3 className="text-white text-2xl font-normal">In Progress</h3>
-            <h1 className="text-white text-6xl font-semibold">0</h1>
+            <h1 className="text-white text-6xl font-semibold">
+              {insProgressTasks.length}
+            </h1>
           </div>
         </div>
 
@@ -34,7 +36,9 @@ const TasksProgress = () => {
           />
           <div className="px-4 py-15 text-center space-y-4">
             <h3 className="text-white text-2xl font-normal">Resolved</h3>
-            <h1 className="text-white text-6xl font-semibold">0</h1>
+            <h1 className="text-white text-6xl font-semibold">
+              {resolvedTasks.length}
+            </h1>
           </div>
         </div>
       </div>

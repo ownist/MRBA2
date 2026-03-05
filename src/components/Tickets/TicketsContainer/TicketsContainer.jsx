@@ -1,16 +1,7 @@
 import { Logs } from "lucide-react";
 import TicketCards from "./TicketCards";
-import { Suspense } from "react";
-import Loading from "../../Loading";
 
-const ticketsFetch = async () => {
-  const res = await fetch("./data.json");
-  return (await res).json();
-};
-
-const ticketsPromise = ticketsFetch();
-
-const TicketsContainer = ({ handleTicketTaskStatus }) => {
+const TicketsContainer = ({ handleTicketTaskStatus, allTickets }) => {
   return (
     <>
       <div className="col-span-full lg:col-span-8">
@@ -26,12 +17,11 @@ const TicketsContainer = ({ handleTicketTaskStatus }) => {
           </div>
 
           {/* tickets cards */}
-          <Suspense fallback={<Loading />}>
-            <TicketCards
-              handleTicketTaskStatus={handleTicketTaskStatus}
-              ticketsPromise={ticketsPromise}
-            />
-          </Suspense>
+
+          <TicketCards
+            handleTicketTaskStatus={handleTicketTaskStatus}
+            allTickets={allTickets}
+          />
         </div>
       </div>
     </>

@@ -1,6 +1,11 @@
+import ResolvedTasks from "./ResolvedTasks";
 import SingleTicketStatusCard from "./SingleTicketStatusCard";
 
-const TicketsStatus = ({ insProgressTasks }) => {
+const TicketsStatus = ({
+  insProgressTasks,
+  handleResolveTask,
+  resolvedTasks,
+}) => {
   return (
     <>
       <div className="hidden lg:grid lg:col-span-4">
@@ -18,7 +23,11 @@ const TicketsStatus = ({ insProgressTasks }) => {
               ) : (
                 <div className="space-y-4">
                   {insProgressTasks.map((item, index) => (
-                    <SingleTicketStatusCard item={item} key={index} />
+                    <SingleTicketStatusCard
+                      handleResolveTask={handleResolveTask}
+                      item={item}
+                      key={index}
+                    />
                   ))}
                 </div>
               )}
@@ -32,15 +41,19 @@ const TicketsStatus = ({ insProgressTasks }) => {
               Resolved Task
             </h1>
 
-            <p className="text-gray-500 text-base font-normal">
-              No resolved tasks yet.
-            </p>
-
-            {/* <div className="">
-              <h1 className="text-slate-900 text-lg font-medium px-4 py-5 bg-indigo-100 rounded shadow-[0px_4px_16px_0px_rgba(0,0,0,0.08)]">
-                Incorrect Billing Address
-              </h1>
-            </div> */}
+            <div className="">
+              {resolvedTasks.length === 0 ? (
+                <p className="text-gray-500 text-base font-normal">
+                  No resolved tasks yet.
+                </p>
+              ) : (
+                <div className="space-y-4">
+                  {resolvedTasks.map((task, index) => (
+                    <ResolvedTasks task={task} key={index} />
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/*  */}
           </div>
