@@ -10,7 +10,7 @@ const ticketsFetch = async () => {
 
 const ticketsPromise = ticketsFetch();
 
-const TicketsContainer = () => {
+const TicketsContainer = ({ handleTicketTaskStatus }) => {
   return (
     <>
       <div className="col-span-full lg:col-span-8">
@@ -27,7 +27,10 @@ const TicketsContainer = () => {
 
           {/* tickets cards */}
           <Suspense fallback={<Loading />}>
-            <TicketCards ticketsPromise={ticketsPromise} />
+            <TicketCards
+              handleTicketTaskStatus={handleTicketTaskStatus}
+              ticketsPromise={ticketsPromise}
+            />
           </Suspense>
         </div>
       </div>

@@ -1,18 +1,19 @@
 import { Calendar } from "lucide-react";
 import { useState } from "react";
 
-const SingleTicketCard = ({ ticket }) => {
+const SingleTicketCard = ({ ticket, handleTicketTaskStatus }) => {
   const [status, setStatus] = useState(ticket.status);
 
-  const handleStatusChange = () => {
+  const handleStatusChange = (ticket) => {
     setStatus("In Progress");
+    handleTicketTaskStatus(ticket);
   };
 
   const inProgress = status === "In Progress";
 
   return (
     <div
-      onClick={handleStatusChange}
+      onClick={() => handleStatusChange(ticket)}
       className="bg-white rounded shadow-[0px_4px_16px_0px_rgba(0,0,0,0.08)] border border-transparent cursor-pointer duration-200 hover:border-gray-400/40"
     >
       <div className="px-4 py-5 space-y-2">
