@@ -1,4 +1,3 @@
-import { Logs } from "lucide-react";
 import TicketCards from "./TicketCards";
 
 const TicketsContainer = ({ handleTicketTaskStatus, allTickets }) => {
@@ -10,10 +9,6 @@ const TicketsContainer = ({ handleTicketTaskStatus, allTickets }) => {
             <h1 className="text-slate-700 text-xl sm:text-2xl font-semibold">
               Customer Tickets
             </h1>
-
-            <button className="lg:hidden py-2 px-2.5 rounded bg-white border border-gray-300">
-              <Logs size={16} className="text-zinc-700" />
-            </button>
           </div>
 
           {/* tickets cards */}

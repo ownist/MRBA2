@@ -8,7 +8,7 @@ const TicketsStatus = ({
 }) => {
   return (
     <>
-      <div className="hidden lg:grid lg:col-span-4">
+      <div className="col-span-full lg:col-span-4">
         <div className="space-y-10">
           <div className="space-y-4">
             <h1 className="text-slate-700 text-2xl font-semibold">

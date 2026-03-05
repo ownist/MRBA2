@@ -48,7 +48,7 @@ const App = () => {
           insProgressTasks={insProgressTasks}
         />
 
-        <section className="grid grid-cols-12 lg:gap-8 mb-20">
+        <section className="grid grid-cols-12 gap-y-8 lg:gap-x-8 mb-20">
           <TicketsContainer
             allTickets={allTickets}
             handleTicketTaskStatus={handleTicketTaskStatus}
