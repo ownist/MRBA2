@@ -1,15 +1,9 @@
 import { Calendar } from "lucide-react";
-import { useState } from "react";
 
 const SingleTicketCard = ({ ticket, handleTicketTaskStatus }) => {
-  const [status, setStatus] = useState(ticket.status);
-
   const handleStatusChange = (ticket) => {
-    setStatus("In Progress");
     handleTicketTaskStatus(ticket);
   };
-
-  const inProgress = status === "In Progress";
 
   return (
     <div
@@ -23,12 +17,12 @@ const SingleTicketCard = ({ ticket, handleTicketTaskStatus }) => {
           </h1>
 
           <div
-            className={`inline-flex items-center gap-x-1.5 ${inProgress ? "text-yellow-700" : "text-green-900"} text-base font-medium px-3 py-1 ${inProgress ? "bg-yellow-100" : "bg-green-200"} rounded-full`}
+            className={`inline-flex items-center gap-x-1.5 ${ticket.status.split(" ").join("") === "InProgress" ? "text-yellow-700" : "text-green-900"} text-base font-medium px-3 py-1 ${ticket.status.split(" ").join("") === "InProgress" ? "bg-yellow-100" : "bg-green-200"} rounded-full`}
           >
             <span
-              className={`size-4 ${inProgress ? "bg-yellow-400" : "bg-green-600"} rounded-full`}
+              className={`size-4 ${ticket.status.split(" ").join("") === "InProgress" ? "bg-yellow-400" : "bg-green-600"} rounded-full`}
             ></span>
-            {status}
+            {ticket.status}
           </div>
         </div>
 

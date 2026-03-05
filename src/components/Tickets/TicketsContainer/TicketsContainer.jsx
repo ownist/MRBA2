@@ -17,7 +17,6 @@ const TicketsContainer = ({ handleTicketTaskStatus, allTickets }) => {
           </div>
 
           {/* tickets cards */}
-
           <TicketCards
             handleTicketTaskStatus={handleTicketTaskStatus}
             allTickets={allTickets}
