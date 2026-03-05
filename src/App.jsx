@@ -3,6 +3,8 @@ import NavbarDesktop from "./components/Navbar/NavbarDesktop";
 import TasksProgress from "./components/TasksProgress";
 import TicketsContainer from "./components/Tickets/TicketsContainer/TicketsContainer";
 import TicketsStatus from "./components/Tickets/TicketsStatus/TicketsStatus";
+import { toast, ToastContainer } from "react-toastify";
+import Footer from "./components/Footer";
 
 const ticketsFetch = async () => {
   const res = await fetch("./data.json");
@@ -22,8 +24,9 @@ const App = () => {
     if (!findTicketId) {
       const pendingTicketstasks = [...insProgressTasks, ticket];
       setInProgressTasks(pendingTicketstasks);
+      toast.success(`"${ticket.title}" In Progress`);
     } else {
-      alert(`"${ticket.title}" In Progress`);
+      toast.error(`"${ticket.title}" Alrady In Progress`);
     }
   };
 
@@ -35,6 +38,7 @@ const App = () => {
     const allResolvedTasks = [...resolvedTasks, task];
 
     setInProgressTasks(findId);
+    toast.success(`"${task.title}" resolved`);
     setResolvedTasks(allResolvedTasks);
     setAllTickets(findResolvedTicketId);
   };
@@ -60,6 +64,10 @@ const App = () => {
           />
         </section>
       </main>
+
+      <Footer />
+
+      <ToastContainer />
     </>
   );
 };
